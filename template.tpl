@@ -14,7 +14,7 @@ ___INFO___
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "displayName": "Volumental Sizing Template",
+  "displayName": "Volumental Sizing",
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
@@ -219,6 +219,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 15/08/2023, 13:36:09
+Created on 16/08/2023, 09:02:30
 
 
