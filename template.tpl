@@ -35,13 +35,52 @@ ___TEMPLATE_PARAMETERS___
     "name": "vol_token",
     "displayName": "Volumental Token",
     "simpleValueType": true,
-    "help": "Your unique Volumental Token that has been provided to you from Volumental."
+    "help": "Your unique Volumental Token that has been provided to you from Volumental.",
+    "valueValidators": [
+      {
+        "type": "NON_EMPTY"
+      }
+    ],
+    "alwaysInSummary": true
   },
   {
     "type": "TEXT",
     "name": "productId",
     "displayName": "Product SKU",
+    "simpleValueType": true,
+    "alwaysInSummary": true
+  },
+  {
+    "type": "TEXT",
+    "name": "onRecommendation",
+    "displayName": "onRecommendation",
     "simpleValueType": true
+  },
+  {
+    "type": "SELECT",
+    "name": "size_locale",
+    "displayName": "Shoe size system",
+    "macrosInSelect": true,
+    "selectItems": [
+      {
+        "value": "us",
+        "displayValue": "US"
+      },
+      {
+        "value": "eu",
+        "displayValue": "EU"
+      },
+      {
+        "value": "uk",
+        "displayValue": "UK"
+      },
+      {
+        "value": "au",
+        "displayValue": "AU"
+      }
+    ],
+    "simpleValueType": true,
+    "help": "The shoe size system used. Use US for United States, EU for European Union, UK for United Kingdom and AU for Australia."
   }
 ]
 
@@ -54,11 +93,8 @@ const queryPermission = require('queryPermission');
 const callInWindow = require('callInWindow');
 const getType = require('getType');
 
-// Pick the correct url depending on if we are in dev or not.
-let url = "https://widget.volumental.dev/embed.js";
-if (!data.dev) {
-  url = "https://widget.volumental.com/embed.js";
-}
+// This is a template for GTM Community Gallery and thus runs on production
+let url = "https://widget.volumental.com/embed.js";
 
 // Make sure we have the permissions to inject the volumental script.
 if (!queryPermission('inject_script', url)) {
@@ -83,6 +119,8 @@ injectScript(
       container: 'volumental-sizing-container',
       token: data.vol_token,
       productId: data.productId,
+      onRecommendation: data.onRecommendation,
+      size_locale: data.size_locale
     });
     
     data.gtmOnSuccess();
@@ -219,6 +257,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 16/08/2023, 09:02:30
+Created on 18/08/2023, 16:03:03
 
 
