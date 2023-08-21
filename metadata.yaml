@@ -16,13 +16,15 @@ homepage: "https://volumental.com/"
 documentation: "https://developer.volumental.com/docs/ecom-widget"
 versions:
   # Latest version
+  - sha: 2a2d6dceac99567fbb6dbd8e9aff088275aac215
+    changeNotes: Changed sizing system from drop down to text field
+
+  # Older versions
   - sha: e715b4e337786e7e56a37c595e60a47c33c9bd6a
     changeNotes: |2
       Added onRecommendation callback functionality.
       Added size_locale functionality.
       Template runs on production.
       Added validation rule (token should not be empty).
-
-  # Older versions
   - sha: e9e848707e477ab4270f635c4a8cccc2e24ddf87
     changeNotes: Added Volumental Sizing Template, updated README, removed CONTRIBUTING.md
