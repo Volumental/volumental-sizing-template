@@ -54,33 +54,15 @@ ___TEMPLATE_PARAMETERS___
     "type": "TEXT",
     "name": "onRecommendation",
     "displayName": "onRecommendation",
-    "simpleValueType": true
+    "simpleValueType": true,
+    "help": "This parameter is optional. The onRecommendation callback will run after the user has made a scan and a best size recommendation is shown in the Volumental Sizing Widget. For instance, the callback can be used to automatically select the recommended best size retrieved after scanning."
   },
   {
-    "type": "SELECT",
+    "type": "TEXT",
     "name": "size_locale",
-    "displayName": "Shoe size system",
-    "macrosInSelect": true,
-    "selectItems": [
-      {
-        "value": "us",
-        "displayValue": "US"
-      },
-      {
-        "value": "eu",
-        "displayValue": "EU"
-      },
-      {
-        "value": "uk",
-        "displayValue": "UK"
-      },
-      {
-        "value": "au",
-        "displayValue": "AU"
-      }
-    ],
+    "displayName": "Sizing system",
     "simpleValueType": true,
-    "help": "The shoe size system used. Use US for United States, EU for European Union, UK for United Kingdom and AU for Australia."
+    "help": "This parameter is optional. Use sizing system us for United States, eu for European Union, uk for United Kingdom and au for Australia."
   }
 ]
 
@@ -257,6 +239,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 18/08/2023, 16:03:03
+Created on 21/08/2023, 14:36:15
 
 
