@@ -100,7 +100,7 @@ injectScript(
     var call = callInWindow('volumental.Widgets.RecommendationButton', {
       container: 'volumental-sizing-container',
       token: data.vol_token,
-      productId: data.productId,
+      product_id: data.productId,
       onRecommendation: data.onRecommendation,
       size_locale: data.size_locale
     });
@@ -239,6 +239,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 21/08/2023, 14:36:15
+Created on 04/09/2023, 10:12:37
 
 
