@@ -16,10 +16,12 @@ homepage: "https://volumental.com/"
 documentation: "https://developer.volumental.com/docs/ecom-widget"
 versions:
   # Latest version
-  - sha: 2a2d6dceac99567fbb6dbd8e9aff088275aac215
-    changeNotes: Changed sizing system from drop down to text field
+  - sha: b24a4328fc5ddc972debac3d5898bc155361cd0d
+    changeNotes: Fixed bug in template. Changed productId to product_id
 
   # Older versions
+  - sha: 2a2d6dceac99567fbb6dbd8e9aff088275aac215
+    changeNotes: Changed sizing system from drop down to text field
   - sha: e715b4e337786e7e56a37c595e60a47c33c9bd6a
     changeNotes: |2
       Added onRecommendation callback functionality.
